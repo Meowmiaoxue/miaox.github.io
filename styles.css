@@ -16,9 +16,9 @@ body {
 
 /* 容器样式 - 用于包裹描述区和图片展示区 */
 .container {
-  width: 90%;
+  width: 92%;
   display: flex;
-  gap: 10%;
+  gap: 5%;
   align-items: flex-start;
   margin: 0 auto;
   padding-bottom: 10%;
@@ -27,8 +27,7 @@ body {
 
 /* 描述区样式 - 左侧固定的文字说明区域 */
 .description {
-  width: 25%;
-  border: 1px solid #e7e6e6;
+  width: 22%;
   position: sticky;
   top: 20px;
   height: auto;
@@ -49,41 +48,30 @@ body {
   grid-auto-flow: dense;
 }
 
-@media (max-width: 1024px) {
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-    /* 平板变成 2 列 */
-    gap: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .gallery {
-    grid-template-columns: repeat(1, 1fr);
-
-    gap: 15px;
-  }
-}
-
 /* 图片单元格基础样式 */
 .img {
   width: 100%;
   height: 100%;
+  aspect-ratio: 1;
   /* 确保容器占满高度 */
   position: relative;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   /* 防止图片溢出 */
   border: 1px solid lightgrey;
+  object-fit: cover
 }
 
 /* 图片编号样式 - 显示在图片左上角的数字 */
 .img::after {
   content: attr(data-number);
   position: absolute;
+  display: inline-block;
   top: 5px;
   left: -20px;
   color: rgb(110, 110, 110);
-  font-size: 0.5em;
+  font-size: 15px;
   padding: 2px 5px;
   border-radius: 3px;
 }
@@ -99,18 +87,12 @@ body {
   cursor: zoom-in;
 }
 
-
 .layout-full {
   grid-column: 1 / -1;
   /* 确保占满整行 */
   grid-row: span 1;
   /* 确保它只占 1 行 */
-  height: 100%;
-  /* 让它继承 .gallery 设定的行高 */
-
-
-  height: 200px;
-
+  height: 400px;
 }
 
 /* 布局类型2：一常规图+一宽图组合 */
@@ -183,6 +165,26 @@ a {
   all: unset;
   text-decoration: none;
   color: inherit;
+}
+
+
+p {
+  font-size: 25px;
+  color: rgb(88, 88, 88)
+}
+
+h1 {
+  font-size: 25px;
+  color: rgb(88, 88, 88);
+  text-decoration: underline dotted;
+  font-weight: lighter;
+}
+
+h2 {
+  font-size: 18px;
+  color: rgb(88, 88, 88);
+  line-height: -2px;
+  font-weight: lighter;
 }
 
 /* 图片放大遮罩层样式 */
