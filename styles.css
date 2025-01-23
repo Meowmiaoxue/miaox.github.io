@@ -1,4 +1,3 @@
-/* 全局设置 - 重置所有元素的默认样式 */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -40,12 +39,30 @@ body {
 
 /* 图片网格基础样式 - 右侧的图片展示区 */
 .gallery {
+
   width: 70%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 1fr;
+  grid-auto-rows: minmax(150px, auto);
   gap: 50px;
   box-sizing: border-box;
+  grid-auto-flow: dense;
+}
+
+@media (max-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    /* 平板变成 2 列 */
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(1, 1fr);
+
+    gap: 15px;
+  }
 }
 
 /* 图片单元格基础样式 */
@@ -82,11 +99,18 @@ body {
   cursor: zoom-in;
 }
 
-/* 布局类型1：全宽单图 - 图片占据整行 */
+
 .layout-full {
   grid-column: 1 / -1;
-  height: 400px;
-  /* 固定高度确保一致性 */
+  /* 确保占满整行 */
+  grid-row: span 1;
+  /* 确保它只占 1 行 */
+  height: 100%;
+  /* 让它继承 .gallery 设定的行高 */
+
+
+  height: 200px;
+
 }
 
 /* 布局类型2：一常规图+一宽图组合 */
@@ -112,6 +136,7 @@ body {
 .layout-3-equal .img {
   grid-column: span 1;
   aspect-ratio: 1;
+  height: 40%;
 }
 
 /* 布局类型4：双倍高度单图 */
@@ -125,7 +150,7 @@ body {
 .header {
   position: sticky;
   bottom: 0;
-  width: 95%;
+  width: 100%;
   padding: 2.5%;
   background: #ffffff;
   display: flex;
