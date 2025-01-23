@@ -60,7 +60,6 @@ body {
   justify-content: center;
   /* 防止图片溢出 */
   border: 1px solid lightgrey;
-  object-fit: cover
 }
 
 /* 图片编号样式 - 显示在图片左上角的数字 */
@@ -68,12 +67,11 @@ body {
   content: attr(data-number);
   position: absolute;
   display: inline-block;
-  top: 5px;
-  left: -20px;
+  top: 0px;
+  left: -25px;
   color: rgb(110, 110, 110);
   font-size: 15px;
   padding: 2px 5px;
-  border-radius: 3px;
 }
 
 /* 图片基础样式设置 */
@@ -89,9 +87,6 @@ body {
 
 .layout-full {
   grid-column: 1 / -1;
-  /* 确保占满整行 */
-  grid-row: span 1;
-  /* 确保它只占 1 行 */
   height: 400px;
 }
 
@@ -207,4 +202,55 @@ h2 {
   max-height: 90%;
   object-fit: contain;
   cursor: zoom-out;
+}
+
+.close {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+}
+
+.lightbox {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  display: block;
+  cursor: zoom-out;
+}
+
+/* Navigation Arrows */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.prev {
+  left: 50px;
+}
+
+.next {
+  right: 50px;
 }

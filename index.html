@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" src=“豆.png“>
     <title>meow
     </title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <script src="script1.js" defer></script>
+
 
 </head>
 
@@ -76,15 +78,14 @@
             </p>
         </div>
         <div class="gallery">
-            <div class="img" id="square" data-number="1"><img src="form/1.jpg" />
+            <div class="img layout-tall" data-number="1">
+                <img src="form/5.jpg" />
             </div>
-            <div class="img" id="square" data-number="1"><img src="form/2.jpg" />
+            <div class="img" id="square" data-number="1"><img src="form/9.jpg" />
             </div>
-            <div class="img" id="square" data-number="1"><img src="form/3.png" />
+            <div class="img" id="square" data-number="1"><img src="form/8.JPG" />
             </div>
             <div class="img" id="square" data-number="1"><img src="form/7.jpg" />
-            </div>
-            <div class="img" id="square" data-number="1"><img src="form/5.jpg" />
             </div>
             <div class="img" id="square" data-number="1"><img src="form/6.jpg" />
             </div>
@@ -112,11 +113,13 @@
             <div class="img" id="square" data-number="1"><img
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/FL_fig04.jpg/220px-FL_fig04.jpg" />
             </div>
-            <div class="img" data-number="5"></div>
-            <div class="img" data-number="6"></div>
-            <div class="img" data-number="7"></div>
-            <div class="img" data-number="8"></div>
         </div>
+    </div>
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img">
+        <div class="prev" onclick="changeImage(-1)">&#10094;</div>
+        <div class="next" onclick="changeImage(1)">&#10095;</div>
     </div>
     <div class="header">
         <div id="left">
