@@ -12,6 +12,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding-top: 3%;
+  transition: all 0.5s ease-in-out;
 }
 
 /* 容器样式 - 用于包裹描述区和图片展示区 */
@@ -148,6 +149,7 @@ body {
 #left p {
   display: inline;
   margin-right: 10%;
+  cursor: pointer;
 }
 
 #right {
