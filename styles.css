@@ -257,3 +257,28 @@ h2 {
 .next {
   right: 50px;
 }
+
+@media (max-width: 768px) {
+  .gallery {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Single column layout */
+    grid-auto-rows: minmax(200px, auto);
+    /* Responsive height */
+    gap: 15px;
+    /* Space between images */
+  }
+
+  .img {
+    width: 100%;
+    height: auto;
+    /* Allow natural height */
+    object-fit: cover;
+  }
+
+  .layout-full {
+    grid-column: 1 / -1;
+    /* Ensures it takes full width */
+  }
+}
