@@ -89,7 +89,7 @@ body {
 
 .layout-full {
   grid-column: 1 / -1;
-  height: 350px;
+  height: 400px;
 }
 
 /* 布局类型2：一常规图+一宽图组合 */
@@ -115,7 +115,7 @@ body {
 .layout-3-equal .img {
   grid-column: span 1;
   aspect-ratio: 1;
-  height: 40%;
+  height: 100%;
 }
 
 /* 布局类型4：双倍高度单图 */
