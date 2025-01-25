@@ -1,0 +1,44 @@
+{
+	"folders": [
+		{
+			"name": "miaox.github.io",
+			"path": "."
+		},
+		{
+			"name": "form",
+			"path": "../../../../../../Downloads/Links/form"
+		},
+		{
+			"name": "horizon",
+			"path": "../../../../../../Downloads/Links/horizon"
+		},
+		{
+			"name": "concrete",
+			"path": "../../../../../../Downloads/Links/concrete"
+		},
+		{
+			"name": "mashouse",
+			"path": "../../../../../../Downloads/Links/mashouse"
+		},
+		{
+			"name": "nimahouse",
+			"path": "../../../../../../Downloads/Links/nimahouse"
+		},
+		{
+			"name": "solar",
+			"path": "../../../../../../Downloads/Links/solar"
+		},
+		{
+			"name": "wallhouse",
+			"path": "../../../../../../Downloads/Links/wallhouse"
+		},
+		{
+			"name": "X park",
+			"path": "../../../../../../Downloads/Links/X park"
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501,
+		"liveServer.settings.multiRootWorkspaceName": "miaox.github.io"
+	}
+}
